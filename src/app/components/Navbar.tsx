@@ -1,18 +1,25 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Professional Experience", href: "#experience" },
-    { label: "Education", href: "#education" },
-    { label: "Activities", href: "#activities" },
-    { label: "Contact Me", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "Professional Experience", href: "/experience" },
+    { label: "Education", href: "/education" },
+    { label: "Activities", href: "/activities" },
+    { label: "Contact Me", href: "/contact" },
   ];
+
+  const handleNavClick = (href: string) => {
+    setIsOpen(false);
+    router.push(href);
+  };
 
   return (
     <>
@@ -30,7 +37,10 @@ export default function Navbar() {
                 <a 
                   href={item.href} 
                   className={styles.navLink}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
                 >
                   {item.label}
                 </a>
