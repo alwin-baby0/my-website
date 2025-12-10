@@ -1,51 +1,114 @@
 .navbar {
-  background-color: #333;
-  padding: 1rem;
-  position: sticky;
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 1.5rem 2rem;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   z-index: 100;
+  border: none;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: none;
+  transition: all 0.4s ease;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
 }
 
 .navContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .navList {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   margin: 0;
   padding: 0;
 }
 
 .navLink {
-  color: white;
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  font-family: inherit;
+  letter-spacing: 0.3px;
 }
 
 .navLink:hover {
-  color: #4a9eff;
+  color: var(--primary-dark);
+  border-bottom-color: var(--primary-dark);
 }
 
 .hamburger {
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: var(--text-primary);
   font-size: 1.5rem;
   cursor: pointer;
+  transition: color 0.3s ease;
+  margin-right: auto;
+}
+
+.hamburger:hover {
+  color: var(--primary-dark);
 }
 
 /* Tablet view */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1rem;
+  }
+
+  .navbar.scrolled {
+    border-radius: 1rem;
+    margin: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    width: calc(100% - 1rem);
+  }
+
   .hamburger {
     display: block;
+    position: fixed;
+    left: 1.5rem;
+    top: 1.5rem;
+    z-index: 101;
+  }
+
+  .navContainer {
+    justify-content: flex-start;
+  }
+
+  .navbar.scrolled {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-top: none;
+    border-left: none;
+    box-shadow: none;
   }
 
   .navList {
@@ -53,11 +116,14 @@
     left: -100%;
     top: 60px;
     flex-direction: column;
-    background-color: #333;
-    width: 100%;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 70%;
+    height: 100%;
+    text-align: left;
     transition: left 0.3s;
-    padding: 2rem 0;
+    padding: 2rem 0 0 2rem;
     gap: 0;
   }
 

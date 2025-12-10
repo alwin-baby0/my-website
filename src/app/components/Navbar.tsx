@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
   const navItems = [
@@ -16,6 +17,19 @@ export default function Navbar() {
     { label: "Contact Me", href: "/contact" },
   ];
 
+
+  const handleScroll = () => {
+    const scrollPercentage = (window.scrollY / window.innerHeight) * 100;
+    setIsScrolled(scrollPercentage > 15);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(handleScroll, []);
+
   const handleNavClick = (href: string) => {
     setIsOpen(false);
     router.push(href);
@@ -23,7 +37,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={styles.navbar}>
+      <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
         <div className={styles.navContainer}>
           <button 
             className={styles.hamburger}
