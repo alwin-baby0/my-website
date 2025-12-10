@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 4rem 0;
 }
 
@@ -44,7 +44,7 @@
 .primaryBtn,
 .secondaryBtn {
   padding: 0.75rem 2rem;
-  border-radius: 2rem;
+  border-radius: var(--border-radius);
   font-weight: 600;
   font-size: 1rem;
   border: 2px solid transparent;
@@ -78,7 +78,7 @@
 
 @media (max-width: 600px) {
   .hero {
-    padding: 2rem 0;
+    padding: 0 0 2rem 0;
   }
 
   .profileImage img {

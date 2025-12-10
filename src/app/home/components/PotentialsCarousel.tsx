@@ -20,7 +20,7 @@ const POTENTIALS = [
     id: 3,
     icon: "📈",
     title: "Trading & Investing",
-    description: "In my spare time, I enjoy delving into the financial markets to invest in a fundamentally sound stock or to spot a quick move in a current pair."
+    description: "In my spare time, I enjoy delving into the financial markets to invest in a fundamentally sound stock or to spot a quick move in a currency pair."
   }
 ];
 

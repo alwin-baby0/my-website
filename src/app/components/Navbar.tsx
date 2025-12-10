@@ -41,7 +41,10 @@ export default function Navbar() {
         <div className={styles.navContainer}>
           <button 
             className={styles.hamburger}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={(e) => {
+              e?.preventDefault()
+              setIsOpen(!isOpen)
+            }}
           >
             ☰
           </button>

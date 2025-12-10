@@ -113,20 +113,3 @@ a.secondary {
     letter-spacing: -1.92px;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-  }
-
-  a.primary {
-    color: #1a1a1a;
-  }
-
-  a.secondary {
-    color: #ffffff;
-  }
-}
