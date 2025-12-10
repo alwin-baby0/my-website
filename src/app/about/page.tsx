@@ -1,9 +1,9 @@
 import styles from "./page.module.css";
 
-export default function Education() {
+export default function About() {
   return (
     <div className={styles.page}>
-      <p>This is Education</p>
+      <p>This is About</p>
     </div>
   );
 }

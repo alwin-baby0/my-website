@@ -25,6 +25,14 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
 .heading {
   font-size: 3.5rem;
   font-weight: 700;

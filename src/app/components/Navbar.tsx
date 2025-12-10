@@ -11,9 +11,8 @@ export default function Navbar() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Professional Experience", href: "/experience" },
-    { label: "Education", href: "/education" },
-    { label: "Activities", href: "/activities" },
+    { label: "About", href: "/about" },
+    { label: "Resume", href: "/resume" },
     { label: "Contact Me", href: "/contact" },
   ];
 

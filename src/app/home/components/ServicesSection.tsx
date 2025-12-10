@@ -9,7 +9,7 @@ export default function ServicesSection() {
   return (
     <section className={styles.services}>
       <h2>Have a product idea? <br/>
-      Need a hand in your ongoing Project?
+      Need a hand in your ongoing project?
       </h2>
       <div className={styles.ctaSection}>
         <h2>Feel free to connect</h2>

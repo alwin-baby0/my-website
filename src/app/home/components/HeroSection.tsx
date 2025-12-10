@@ -12,6 +12,7 @@ export default function HeroSection() {
         <div className={styles.profileImage}>
           <img src="/profile.jpg" alt="Profile" />
         </div>
+        <p className={styles.name}>Alwin Baby</p>
         <h1 className={styles.heading}>
           Building digital experiences<br />
           that matter.
