@@ -45,7 +45,7 @@ export default function Navbar() {
           >
             ☰
           </button>
-          <ul className={`${styles.navList} ${isOpen ? styles.active : ''}`}>
+          <ul className={styles.navList}>
             {navItems.map((item) => (
               <li key={item.label}>
                 <a 
@@ -63,6 +63,32 @@ export default function Navbar() {
           </ul>
         </div>
       </nav>
+      <div 
+        className={`${styles.mobileMenuOverlay} ${isOpen ? styles.showSidemenu : styles.hideSidemenu}`}
+        onClick={() => setIsOpen(false)}
+      >
+        <div 
+          className={styles.mobileMenuPanel}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <ul className={styles.mobileMenuList}>
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <a 
+                  href={item.href} 
+                  className={styles.navLink}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </>
   );
 }
