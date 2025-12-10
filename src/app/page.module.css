@@ -1,20 +1,8 @@
 .page {
-  --background: #e8e8e8;
-  --foreground: #ffffff;
-
-  --text-primary: #1a1a1a;
-  --text-secondary: #666666;
-
-  --button-primary-bg: #1a1a1a;
-  --button-primary-hover: #333333;
-  --button-secondary-hover: #f5f5f5;
-  --button-secondary-border: #d4d4d4;
-
   display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: var(--background);
 }
 
 .main {
@@ -132,16 +120,6 @@ a.secondary {
   }
 
   .page {
-    --background: #1a1a1a;
-    --foreground: #2a2a2a;
-
-    --text-primary: #f0f0f0;
-    --text-secondary: #b0b0b0;
-
-    --button-primary-bg: #ffffff;
-    --button-primary-hover: #e0e0e0;
-    --button-secondary-hover: #3a3a3a;
-    --button-secondary-border: #3a3a3a;
   }
 
   a.primary {
