@@ -38,6 +38,9 @@ export default function Footer() {
             Email: alwin.baby.oficial@gmail.com
           </p>
           <p className={styles.contactInfo}>
+            Mobile: +49 15510 942947
+          </p>
+          <p className={styles.contactInfo}>
             Location: Germany
           </p>
         </div>

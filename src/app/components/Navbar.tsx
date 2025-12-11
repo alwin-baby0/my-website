@@ -1,13 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -52,7 +53,7 @@ export default function Navbar() {
               <li key={item.label}>
                 <a 
                   href={item.href} 
-                  className={styles.navLink}
+                  className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
                   onClick={(e) => {
                     e.preventDefault();
                     handleNavClick(item.href);
@@ -78,7 +79,7 @@ export default function Navbar() {
               <li key={item.label}>
                 <a 
                   href={item.href} 
-                  className={styles.navLink}
+                  className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
                   onClick={(e) => {
                     e.preventDefault();
                     handleNavClick(item.href);

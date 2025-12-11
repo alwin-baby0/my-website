@@ -55,7 +55,7 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: all 0.3s ease;
+  transition: all 0.05s ease;
   padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
   font-family: inherit;
@@ -65,6 +65,12 @@
 .navLink:hover {
   color: var(--primary-dark);
   border-bottom-color: var(--primary-dark);
+}
+
+.navLink.active {
+  color: var(--primary-dark);
+  border-bottom-color: var(--primary-dark);
+  font-weight: 600;
 }
 
 .hamburger {
@@ -207,11 +213,19 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
-  transition: all 0.3s ease;
+  transition: all 0.05s ease;
   display: block;
+  padding-left: 1rem;
+  border-left: 3px solid transparent;
 }
 
 .mobileMenuLink:hover {
   color: var(--primary-dark);
-  padding-left: 0.5rem;
+  border-left-color: var(--primary-dark);
+}
+
+.mobileMenuLink.active {
+  color: var(--primary-dark);
+  border-left-color: var(--primary-dark);
+  font-weight: 600;
 }

@@ -10,7 +10,7 @@ export default function HeroSection() {
     <section className={styles.hero}>
       <div className={styles.heroContent}>
         <div className={styles.profileImage}>
-          <img src="/profile.jpg" alt="Profile" />
+          <img src="/profile.png" alt="Profile" />
         </div>
         <p className={styles.name}>Alwin Baby</p>
         <h1 className={styles.heading}>

@@ -27,10 +27,10 @@ Software engineer with three years of experience building web and TV application
                 <h3><a href="https://www.diagnal.com/" target="_blank" rel="noopener noreferrer">Diagnal Technologies Private Limited</a></h3>
                 <p className={styles.date} data-start="Aug 2022" data-end="Sep 2025">August 2022 – September 2025</p>
                 <p className={styles.location}>Trivandrum, India</p>
+                <br/>
                 <p className={styles.title}>Software Engineer</p>
                 <p className={styles.item}>Created Enlight, a customisable OTT template for Tizen, webOS, and Vidaa platforms.</p>
                 <p className={styles.item}>Developed TV apps (CMGO, Awaan, Illico+, Rally TV) using LightningJS with global reach.</p>
-                <p className={styles.item}>Built custom LightningJS components using WebGL API for complex graphics.</p>
                 <p className={styles.item}>Developed React.js web apps optimised for mobile and browser platforms.</p>
                 <p className={styles.item}>Reduced video player startup time by 25% through optimised data flow.</p>
                 <p className={styles.item}>Improved app startup time by 22% via code splitting and API optimisation.</p>
@@ -52,6 +52,7 @@ Software engineer with three years of experience building web and TV application
                 <h3><a href="https://www.ovgu.de/" target="_blank" rel="noopener noreferrer">Otto-von-Guericke-University Magdeburg</a></h3>
                 <p className={styles.date} data-start="Oct 2025" data-end="Present">October 2025 – Present</p>
                 <p className={styles.location}>Magdeburg, Germany</p>
+                <br/>
                 <p className={styles.title}>Master of Science in Digital Engineering</p>
                 <p className={styles.note}>Currently enrolled in the first semester (Winter 2025)</p>
               </div>
@@ -60,6 +61,7 @@ Software engineer with three years of experience building web and TV application
                 <h3><a href="https://ktu.edu.in/" target="_blank" rel="noopener noreferrer">APJ Abdul Kalam Technological University</a></h3>
                 <p className={styles.date} data-start="Aug 2018" data-end="Jul 2022">August 2018 – July 2022</p>
                 <p className={styles.location}>Government Engineering College Barton Hill, Trivandrum, India</p>
+                <br/>
                 <p className={styles.title}>Bachelor of Technology in Mechanical Engineering</p>
                 <p className={styles.note}>CGPA: 7.9/10</p>
                 <p>Final project: Used the Contour Method to analyse residual stress in an aluminium block in partnership with ISRO.</p>
