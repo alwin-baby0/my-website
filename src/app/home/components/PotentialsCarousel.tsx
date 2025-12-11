@@ -33,7 +33,7 @@ export default function PotentialsCarousel() {
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % POTENTIALS.length);
-    }, 7000); // Change every 7 seconds
+    }, 5000); // Change every 5 seconds
 
     return () => clearInterval(interval);
   }, [autoPlay]);
