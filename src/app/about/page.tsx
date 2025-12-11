@@ -63,12 +63,12 @@ export default function About() {
               </p>
               <div className={styles.stats}>
                 <div className={styles.stat}>
-                  <h3>3+</h3>
-                  <p>Years Experience</p>
+                  <h3>3</h3>
+                  <p>3+ Years of Experience</p>
                 </div>
                 <div className={styles.stat}>
-                  <h3>5+</h3>
-                  <p>Projects Completed</p>
+                  <h3>5</h3>
+                  <p>5+ Projects Completed</p>
                 </div>
                 <div className={styles.stat}>
                   <h3>5</h3>

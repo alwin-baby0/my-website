@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const handleScroll = () => {
     const scrollPercentage = (window.scrollY / window.innerHeight) * 100;
-    setIsScrolled(scrollPercentage > 15);
+    setIsScrolled(scrollPercentage > 5);
   };
 
   useEffect(() => {

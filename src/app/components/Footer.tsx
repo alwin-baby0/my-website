@@ -35,13 +35,16 @@ export default function Footer() {
         <div className={styles.footerSection}>
           <h3>Get in Touch</h3>
           <p className={styles.contactInfo}>
-            Email: alwin.baby.oficial@gmail.com
+            Email: <a href="mailto:alwin.baby.official@gmail.com" className={styles.link}>alwin.baby.official@gmail.com</a>
           </p>
           <p className={styles.contactInfo}>
-            Mobile: +49 15510 942947
+            Mobile: <a href="tel:+491551094294" className={styles.link}>+49 15510 942947</a>
           </p>
           <p className={styles.contactInfo}>
-            Location: Germany
+            WhatsApp: <a href="https://wa.me/919446356648" target="_blank" rel="noopener noreferrer" className={styles.link}>+91 9446 35 6648</a>
+          </p>
+          <p className={styles.contactInfo}>
+            Location: <a href="https://maps.google.com/?q=17+Wedringerstraße+39124+Magdeburg+Germany" target="_blank" rel="noopener noreferrer" className={styles.link}>Magdeburg, Germany</a>
           </p>
         </div>
       </div>
