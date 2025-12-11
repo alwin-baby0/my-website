@@ -24,7 +24,7 @@ Software engineer with three years of experience building web and TV application
               <h2>Experience</h2>
               
               <div className={styles.card}>
-                <h3>Diagnal Technologies Private Limited</h3>
+                <h3><a href="https://www.diagnal.com/" target="_blank" rel="noopener noreferrer">Diagnal Technologies Private Limited</a></h3>
                 <p className={styles.date} data-start="Aug 2022" data-end="Sep 2025">August 2022 – September 2025</p>
                 <p className={styles.location}>Trivandrum, India</p>
                 <p className={styles.title}>Software Engineer</p>
@@ -49,7 +49,7 @@ Software engineer with three years of experience building web and TV application
               <h2>Education</h2>
 
               <div className={styles.card}>
-                <h3>Otto-von-Guericke-University Magdeburg</h3>
+                <h3><a href="https://www.ovgu.de/" target="_blank" rel="noopener noreferrer">Otto-von-Guericke-University Magdeburg</a></h3>
                 <p className={styles.date} data-start="Oct 2025" data-end="Present">October 2025 – Present</p>
                 <p className={styles.location}>Magdeburg, Germany</p>
                 <p className={styles.title}>Master of Science in Digital Engineering</p>
@@ -57,7 +57,7 @@ Software engineer with three years of experience building web and TV application
               </div>
 
               <div className={styles.card}>
-                <h3>APJ Abdul Kalam Technological University</h3>
+                <h3><a href="https://ktu.edu.in/" target="_blank" rel="noopener noreferrer">APJ Abdul Kalam Technological University</a></h3>
                 <p className={styles.date} data-start="Aug 2018" data-end="Jul 2022">August 2018 – July 2022</p>
                 <p className={styles.location}>Government Engineering College Barton Hill, Trivandrum, India</p>
                 <p className={styles.title}>Bachelor of Technology in Mechanical Engineering</p>
@@ -67,6 +67,13 @@ Software engineer with three years of experience building web and TV application
               </div>
             </section>
           </div>
+        </div>
+
+        {/* Download Resume */}
+        <div className={styles.downloadSection}>
+          <a href="/AlwinBabyCV.pdf" download="Alwin Baby - Resume.pdf" className={styles.downloadLink}>
+            Download my detailed resume
+          </a>
         </div>
       </div>
     </div>

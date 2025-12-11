@@ -91,10 +91,20 @@ a.secondary {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   }
 
+  a.primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
   a.secondary:hover {
     background: var(--button-secondary-hover);
     border-color: var(--text-primary);
     transform: translateY(-2px);
+  }
+
+  a.secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 }
 

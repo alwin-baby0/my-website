@@ -8,7 +8,7 @@ export default function Footer() {
   const socialLinks = [
     { label: "GitHub", url: "https://github.com/alwin-baby0" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/alwinbabyofficial/" },
-    { label: "X", url: "https://twitter.com" },
+    { label: "X", url: "https://x.com/alwinbaby1999" },
   ];
 
   return (
