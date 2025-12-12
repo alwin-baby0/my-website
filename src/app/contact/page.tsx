@@ -4,6 +4,9 @@ import { useState } from 'react';
 import styles from "./page.module.css";
 import { showToast } from '../components/Toast';
 
+// API Gateway endpoint
+const API_ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT!;
+
 export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -26,19 +29,36 @@ export default function Contact() {
     setIsLoading(true);
 
     try {
-      // Simulate async operation (2 second delay)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const endpoint = `${API_ENDPOINT}/contact/send-email`
+      
+      // Call API Gateway endpoint
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: emailRequired ? email : '',
+          message: message,
+        }),
+      });
 
-      // Here you would typically send the message to a backend service
-      console.log('Message sent:', { email: emailRequired ? email : 'anonymous', message });
+      const data = await response.json();
 
-      // Show success toast
-      showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
+      if (response.ok) {
+        // Show success toast
+        showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
 
-      // Reset form
-      setEmail('');
-      setMessage('');
+        // Reset form
+        setEmail('');
+        setMessage('');
+      } else {
+        // Show error from API
+        const errorMessage = data.error || 'Failed to send message. Please try again.';
+        showToast(errorMessage, 'error');
+      }
     } catch (error) {
+      console.error('Error sending message:', error);
       showToast('Failed to send message. Please try again.', 'error');
     } finally {
       setIsLoading(false);
@@ -115,7 +135,7 @@ export default function Contact() {
               </p>
             </a>
 
-            <a href="tel:+491551094294" className={styles.contactCard}>
+            <a href="tel:+4915510942947" className={styles.contactCard}>
               <h3>Phone</h3>
               <p className={styles.contactLink}>
                 +49 15510 942947
