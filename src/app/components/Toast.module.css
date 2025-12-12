@@ -2,7 +2,7 @@
 
 .toastContainer {
   position: fixed;
-  top: 20px;
+  top: calc(70px + 1rem);
   right: 20px;
   z-index: 9999;
   display: flex;
@@ -22,6 +22,67 @@
   pointer-events: auto;
   max-width: 400px;
   word-wrap: break-word;
+  background-color: var(--foreground);
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 2px;
+  border-radius: 50%;
+}
+
+.indicator_success {
+  background-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.indicator_success::after {
+  background-color: #10b981;
+}
+
+.indicator_error {
+  background-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.indicator_error::after {
+  background-color: #ef4444;
+}
+
+.indicator_info {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.indicator_info::after {
+  background-color: #3b82f6;
+}
+
+.indicator_warning {
+  background-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+.indicator_warning::after {
+  background-color: #f59e0b;
 }
 
 @keyframes slideIn {
@@ -35,34 +96,27 @@
   }
 }
 
-.success {
-  background-color: #10b981;
-  color: white;
-}
-
-.error {
-  background-color: #ef4444;
-  color: white;
-}
-
-.info {
-  background-color: #3b82f6;
-  color: white;
-}
-
-.warning {
-  background-color: #f59e0b;
-  color: white;
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
   .toastContainer {
-    top: 10px;
+    top: auto;
+    bottom: 20px;
     right: 10px;
     left: 10px;
   }
 
   .toast {
     max-width: 100%;
+    animation: slideInFromBottom 0.3s ease-out;
   }
 }
