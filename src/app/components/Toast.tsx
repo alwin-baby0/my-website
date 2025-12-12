@@ -48,7 +48,7 @@ export default function Toast() {
       {messages.map((toast) => (
         <div key={toast.id} className={`${styles.toast} ${styles[toast.type]}`}>
           <div className={`${styles.indicator} ${styles[`indicator_${toast.type}`]}`}></div>
-          {toast.message}
+          {/* {toast.message} */}
         </div>
       ))}
     </div>
