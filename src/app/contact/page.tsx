@@ -4,16 +4,29 @@ import { useState } from 'react';
 import styles from "./page.module.css";
 import { showToast } from '../components/Toast';
 
-// API Gateway endpoint
+// API Gateway endpoint and API Key
 const API_ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT!;
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+
+// Rate limiting: 15 seconds between messages
+const COOLDOWN_MS = 15000;
 
 export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [emailRequired, setEmailRequired] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
   const handleSendMessage = async () => {
+    // Rate limit check
+    const now = Date.now();
+    if (now - lastSubmitTime < COOLDOWN_MS) {
+      const remainingSeconds = Math.ceil((COOLDOWN_MS - (now - lastSubmitTime)) / 1000);
+      showToast(`Kindly wait ${remainingSeconds} second(s) before sending another message`, 'warning');
+      return;
+    }
+
     // Validate email if required
     if (emailRequired && !email.trim()) {
       showToast('Please enter your email address', 'error');
@@ -27,16 +40,24 @@ export default function Contact() {
     }
 
     setIsLoading(true);
+    setLastSubmitTime(now);
 
     try {
       const endpoint = `${API_ENDPOINT}/contact/send-email`
       
+      // Build headers with API key if available
+      const headers: Record<string, string> = {
+        'Content-Type': 'application/json',
+      };
+      
+      if (API_KEY) {
+        headers['x-api-key'] = API_KEY;
+      }
+      
       // Call API Gateway endpoint
       const response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers,
         body: JSON.stringify({
           email: emailRequired ? email : '',
           message: message,
@@ -180,7 +201,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://linkedin.com/in/alwin-baby"
+              href="https://linkedin.com/in/alwinbabyofficial"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialCard}
