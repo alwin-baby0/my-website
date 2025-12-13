@@ -53,6 +53,37 @@
   font-size: 0.95rem;
   margin-bottom: 0.75rem;
   line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contactInfo svg {
+  flex-shrink: 0;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.socialLink:hover {
+  color: var(--foreground);
+}
+
+.socialLink svg {
+  flex-shrink: 0;
 }
 
 .footerBottom {
