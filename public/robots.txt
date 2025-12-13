@@ -1,0 +1,17 @@
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.next/
+Disallow: /_next/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://alwinbaby.com/sitemap.xml
