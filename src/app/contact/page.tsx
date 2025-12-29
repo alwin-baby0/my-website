@@ -220,7 +220,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://twitter.com/alwin_baby"
+              href="https://x.com/alwinbaby1999"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialCard}

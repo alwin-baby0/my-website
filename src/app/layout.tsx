@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     apple: "/favcicon/apple-touch-icon.png",
   },
   manifest: "/favcicon/site.webmanifest",
+  alternates: {
+    canonical: "https://alwinbaby.com",
+  },
   robots: {
     index: true,
     follow: true,
