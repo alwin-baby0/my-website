@@ -10,7 +10,7 @@ export default function About() {
     },
     {
       category: "Backend & Cloud",
-      items: ["Node.js", "Python", "Express", "REST APIs", "AWS", "Serverless"],
+      items: ["Node.js", "Python", "Express", "REST APIs", "AWS", "Azure", "Serverless"],
     },
     {
       category: "Tools & Platforms",
