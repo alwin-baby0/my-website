@@ -18,7 +18,7 @@ export default function About() {
     },
     {
       category: "Other Skills",
-      items: ["Agile Methodologies", "Technical Documentation"],
+      items: ["Agile Methodologies", "Object Oriented Programming", "Technical Documentation"],
     },
     {
       category: "Languages",
