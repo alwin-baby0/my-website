@@ -77,7 +77,7 @@ export default function About() {
               </div>
             </div>
             <div className={styles.personalImage}>
-              <img src="/profile.png" alt="Alwin Baby" />
+              <img src="/favcicon/android-chrome-512x512.png" alt="Alwin Baby" />
             </div>
           </div>
         </section>

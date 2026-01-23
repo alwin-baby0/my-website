@@ -50,24 +50,48 @@ export default function Footer() {
 
         <div className={styles.footerSection}>
           <h3>Get in Touch</h3>
-          <div className={styles.contactList}>
-            <p className={styles.contactInfo}>
-              <EnvelopeIcon size={16} color="currentColor" />
-              <a href="mailto:alwin.baby.official@gmail.com" className={styles.link}>alwin.baby.official@gmail.com</a>
-            </p>
-            <p className={styles.contactInfo}>
-              <PhoneIcon size={16} color="currentColor" />
-              <a href="tel:+491551094294" className={styles.link}>+49 15510 942947</a>
-            </p>
-            <p className={styles.contactInfo}>
-              <WhatsappIcon size={16} color="currentColor" />
-              <a href="https://wa.me/919446356648" target="_blank" rel="noopener noreferrer" className={styles.link}>+91 9446 35 6648</a>
-            </p>
-            <p className={styles.contactInfo}>
-              <LocationIcon size={16} color="currentColor" />
-              <a href="https://maps.google.com/?q=17+Wedringerstraße+39124+Magdeburg+Germany" target="_blank" rel="noopener noreferrer" className={styles.link}>Magdeburg, Germany</a>
-            </p>
-          </div>
+          <ul className={styles.linkList}>
+            <li>
+              <a
+                href="mailto:alwin.baby.official@gmail.com"
+                className={styles.socialLink}
+              >
+                <EnvelopeIcon size={20} color="currentColor" />
+                <span>alwin.baby.official@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+491551094294"
+                className={styles.socialLink}
+              >
+                <PhoneIcon size={20} color="currentColor" />
+                <span>+49 15510 942947</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/919446356648"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+              >
+                <WhatsappIcon size={20} color="currentColor" />
+                <span>+91 9446 35 6648</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://maps.google.com/?q=17+Wedringerstraße+39124+Magdeburg+Germany"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+              >
+                <LocationIcon size={20} color="currentColor" />
+                <span>Magdeburg, Germany</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
