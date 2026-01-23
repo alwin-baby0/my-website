@@ -9,10 +9,10 @@ export default function HeroSection() {
   return (
     <section className={styles.hero}>
       <div className={styles.heroContent}>
-        <div className={styles.profileImage}>
+        {/* <div className={styles.profileImage}>
           <img src="/profile.png" alt="Profile" />
-        </div>
-        <p className={styles.name}>Alwin Baby</p>
+        </div> */}
+        {/* <p className={styles.name}>Alwin Baby</p> */}
         <h1 className={styles.heading}>
           Building digital experiences<br />
           that matter.
