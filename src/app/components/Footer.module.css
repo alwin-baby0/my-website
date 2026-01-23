@@ -48,24 +48,8 @@
   color: var(--foreground);
 }
 
-.contactInfo {
-  color: #b0b0b0;
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.contactInfo svg {
+.link svg {
   flex-shrink: 0;
-}
-
-.contactList {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
 }
 
 .socialLink {
