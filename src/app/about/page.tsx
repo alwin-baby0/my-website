@@ -14,7 +14,7 @@ export default function About() {
     },
     {
       category: "Tools & Platforms",
-      items: ["Vite", "Git", "GitHub", "Figma", "GitHub Actions", "MS Office", "Power BI", "Photoshop"],
+      items: ["Vite", "Git", "GitHub", "Contentful CMS", "Figma", "GitHub Actions", "MS Office", "Power BI", "Photoshop"],
     },
     {
       category: "Other Skills",
