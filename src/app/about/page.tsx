@@ -28,10 +28,10 @@ export default function About() {
 
   const projects = [
     {
-      title: "Awaan Samsung TV App",
-      description: "Built a high-quality streaming app that delivers live TV and on-demand content to viewers across the Middle East and North Africa.",
-      tags: ["LightningJS", "WebGL", "Tizen", "Typescript", "Remote Interaction"],
-      href: "https://www.samsung.com/de/tvs/smart-tv/samsung-tv-apps-detail/?appId=3201607010180",
+      title: "Dubai Plus Web App",
+      description: "Created a streaming web platform for the Middle East where users can watch live and on-demand content with a smooth, responsive experience.",
+      tags: ["React", "Javascript", "Live", "Video on Demand"],
+      href: "https://www.dubaiplus.net/",
     },
     {
       title: "CMGO Web App",
@@ -40,10 +40,10 @@ export default function About() {
       href: "https://cmgo.com",
     },
     {
-      title: "Awaan Web App",
-      description: "Created a streaming web platform for the Middle East where users can watch live and on-demand content with a smooth, responsive experience.",
-      tags: ["React", "Javascript", "Live", "Video on Demand"],
-      href: "https://www.awaan.ae",
+      title: "Awaan Samsung TV App",
+      description: "Built a high-quality streaming app that delivers live TV and on-demand content to viewers across the Middle East and North Africa.",
+      tags: ["LightningJS", "WebGL", "Tizen", "Typescript", "Remote Interaction"],
+      href: "https://www.samsung.com/de/tvs/smart-tv/samsung-tv-apps-detail/?appId=3201607010180",
     },
   ];
 
