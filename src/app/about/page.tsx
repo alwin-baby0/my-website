@@ -10,11 +10,11 @@ export default function About() {
     },
     {
       category: "Backend & Cloud",
-      items: ["Node.js", "Python", "Express", "REST APIs", "AWS", "Azure", "Serverless"],
+      items: ["Node.js", "Python", "Express", "REST APIs", "MongoDB", "AWS", "Azure", "Serverless"],
     },
     {
       category: "Tools & Platforms",
-      items: ["Vite", "Git", "GitHub", "Contentful CMS", "Figma", "GitHub Actions", "MS Office", "Power BI", "Photoshop"],
+      items: ["Vite", "Git", "GitHub", "Copilot", "Contentful CMS", "Figma", "GitHub Actions", "MS Office", "Power BI", "Photoshop"],
     },
     {
       category: "Other Skills",
