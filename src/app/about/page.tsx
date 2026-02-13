@@ -6,11 +6,15 @@ export default function About() {
   const skillsData = [
     {
       category: "Frontend",
-      items: ["React.js", "Next.js", "LighntningJS", "TypeScript", "CSS/Tailwind", "HTML5", "Responsive Design"],
+      items: ["React.js", "Next.js", "LighntningJS", "VanillaJS", "Angular", "TypeScript", "CSS/Tailwind", "HTML5", "Responsive Design"],
     },
     {
       category: "Backend & Cloud",
-      items: ["Node.js", "Python", "Express", "REST APIs", "MongoDB", "AWS", "Azure", "Serverless"],
+      items: ["Node.js", "Python", "Express", "MySQL", "REST APIs", "MongoDB", "AWS", "Azure", "Serverless"],
+    },
+    {
+      category: "Streaming Technologies",
+      items: ["DASH", "HLS", "Video-on-demand", "Live streaming", "Widevine", "PlayReady", "Shaka Player"],
     },
     {
       category: "Tools & Platforms",
